@@ -12,6 +12,7 @@ public class DanielAssignment1 {
         DanielAssignment1Rectangle r2 = new DanielAssignment1Rectangle(3.5, 
                 35.9);
         
+        // Print out information about the first rectangle.
         System.out.printf("\n"
                 + "Rectangle 1\n"
                 + "===========\n"
@@ -21,6 +22,7 @@ public class DanielAssignment1 {
                 + "Perimeter: %f\n", r1.width, r1.height, r1.getArea(), 
                 r1.getPerimeter());
         
+        // Print out information about the second rectangle.
         System.out.printf("\n"
                 + "Rectangle 2\n"
                 + "===========\n"
