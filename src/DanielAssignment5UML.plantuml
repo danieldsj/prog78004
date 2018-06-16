@@ -1,0 +1,30 @@
+@startuml
+
+Colorable o-- Square : aggregation
+Colorable o-- GeometricObject : aggregation
+GeometricObject o-- Square : aggregation
+
+DanielAssignment5 --- GeometricObject : association
+DanielAssignment5 --- Square : association
+
+interface Colorable {
+    {abstract} howToColor()
+}
+
+abstract class GeometricObject {
+    {abstract} getArea()
+}
+
+class Square {
+    - width : double
+    - height : double
+    Square() : void
+    + getArea() : double
+    + howToColor() : void
+}
+
+class DanielAssignment5 {
+    {static} + main() : void
+}
+
+@enduml
