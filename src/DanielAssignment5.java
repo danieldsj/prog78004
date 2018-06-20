@@ -18,7 +18,6 @@
  * Every class of the colorable object must implment the Colorable interface.
  */
 interface Colorable {
-
     void howToColor();
 }
 
@@ -30,10 +29,8 @@ interface Colorable {
  * GeometricObject also implement the Colorable interface.
  *
  */
-abstract class GeometricObject implements Colorable {
-
+abstract class GeometricObject {
     abstract public double getArea();
-
 }
 
 /**
@@ -74,7 +71,7 @@ public class DanielAssignment5 {
     public static void main (String[] args) {
 
         // Create an array with a length of 5 of Geometric objects.
-        GeometricObject[] array = new GeometricObject[5];
+        GeometricObject[] array = new Square[5];
 
         // Populate the array with Squares (GeometricObject is an abstract class and cannot have objects).
         array[0] = new Square(2.1, 4.7);
@@ -85,12 +82,11 @@ public class DanielAssignment5 {
 
         // Iterate over the array.
         for (int i = 0; i < array.length; i++) {
-            System.out.printf("Square at index %d has area of %.2f.", i, array[i].getArea());
+            System.out.printf("Square at index %d has area of %.2f. \n", i, array[i].getArea());
 
             if (array[i] instanceof Colorable) {
                 // Check to see if the object implements the Colorable interface.
-                System.out.print("Executing the howToColor returns: ");
-                array[i].howToColor();
+                ((Colorable)array[i]).howToColor();
 
             } else {
 

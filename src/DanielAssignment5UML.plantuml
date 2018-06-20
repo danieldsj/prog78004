@@ -1,11 +1,11 @@
 @startuml
 
 Colorable o-- Square : aggregation
-Colorable o-- GeometricObject : aggregation
 GeometricObject o-- Square : aggregation
 
 DanielAssignment5 --- GeometricObject : association
 DanielAssignment5 --- Square : association
+DanielAssignment5 --- Colorable : association
 
 interface Colorable {
     {abstract} howToColor()
